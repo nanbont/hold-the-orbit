@@ -12,7 +12,7 @@ import holdtheorbit.util.Animation;
 
 public abstract class Alien extends Entity implements Movable, Destructible, Shooter {
 
-    // ---- Part 1: fields ----
+    
     private int health;
     private final int maxHealth;
     private final double speed;
@@ -28,7 +28,7 @@ public abstract class Alien extends Entity implements Movable, Destructible, Sho
     private int shootInterval;
     private final List<EnemyProjectile> pendingShots;
 
-    // ---- Part 2: constructor + the one abstract method ----
+    
     public Alien(double x, double y, int width, int height,
                  int health, double speed, int earthLine, int screenRight) {
         super(x, y, width, height);
@@ -45,7 +45,7 @@ public abstract class Alien extends Entity implements Movable, Destructible, Sho
 
     protected abstract Animation activeAnimation();
 
-    // ---- Part 3: freeze ----
+
     public void setFrozen(boolean frozen) {
         this.frozen = frozen;
     }
@@ -54,7 +54,7 @@ public abstract class Alien extends Entity implements Movable, Destructible, Sho
         return frozen;
     }
 
-    // ---- Part 4: shooting ----
+    
     protected void enableShooting(BufferedImage[] boltFrames, int screenWidth,
                                   int shootInterval) {
         this.canShoot = true;
@@ -93,7 +93,7 @@ public abstract class Alien extends Entity implements Movable, Destructible, Sho
         return out;
     }
 
-    // ---- Part 5: moving, updating, drawing ----
+    
     @Override
     public void moveStep() {
         if (frozen) {
@@ -123,7 +123,7 @@ public abstract class Alien extends Entity implements Movable, Destructible, Sho
                     getWidth(), getHeight(), null);
     }
 
-    // ---- Part 6: getting hit + small helpers ----
+    
     @Override
     public void takeHit(int damage) {
         health -= damage;
