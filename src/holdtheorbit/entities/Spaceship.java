@@ -66,9 +66,9 @@ public class Spaceship extends Entity implements Destructible {
         this.shield = null;
         this.activeUpgrade = null;
 
+}
 
-
-            public void setFiringEnabled(boolean enabled) {
+    public void setFiringEnabled(boolean enabled) {
         this.firingEnabled = enabled;
     }
 
@@ -221,4 +221,3 @@ public class Spaceship extends Entity implements Destructible {
 
 
 
-    }
