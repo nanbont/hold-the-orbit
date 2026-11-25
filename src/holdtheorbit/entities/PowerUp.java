@@ -33,6 +33,7 @@ public class PowerUp extends Entity {
                     getWidth(), getHeight(), null);
     }
 
+    
     public Upgrade collect() {
         setAlive(false);
         return upgrade;
